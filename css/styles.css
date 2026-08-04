@@ -11314,6 +11314,107 @@ p {
 .intro {
   position: relative;
 }
+.giorslaud-booking-widget {
+  --gs-primary-color: #0f8ec7;
+  --gs-primary-color-hover: #0876a8;
+  --gs-radius: 14px;
+
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  max-width: 100%;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+}
+
+.giorslaud-booking-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 13px 22px;
+  border-radius: var(--gs-radius);
+  background:
+    linear-gradient(135deg, rgba(16, 185, 212, 0.12), rgba(15, 142, 199, 0.08)),
+    #ffffff;
+  color: #0f4f7a;
+  border: 1px solid rgba(15, 142, 199, 0.18);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.2;
+  box-shadow: 0 12px 28px rgba(15, 142, 199, 0.16);
+  transition: transform 160ms ease, box-shadow 160ms ease,
+    background-color 160ms ease;
+}
+
+.giorslaud-booking-button:hover {
+  background:
+    linear-gradient(135deg, rgba(16, 185, 212, 0.18), rgba(15, 142, 199, 0.12)),
+    #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 16px 34px rgba(15, 142, 199, 0.22);
+}
+
+.giorslaud-booking-button:focus-visible {
+  outline: 3px solid rgba(15, 142, 199, 0.35);
+  outline-offset: 4px;
+}
+
+.giorslaud-brand-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px 8px 8px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(15, 142, 199, 0.12);
+  color: #35536b;
+  font-size: 12px;
+  line-height: 1.2;
+  box-shadow: 0 10px 22px rgba(15, 142, 199, 0.08);
+  backdrop-filter: blur(6px);
+}
+
+.giorslaud-brand-logo {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  object-fit: cover;
+  flex: 0 0 auto;
+  box-shadow: 0 6px 14px rgba(15, 142, 199, 0.12);
+}
+
+.giorslaud-brand-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.giorslaud-brand-kicker {
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #6c859b;
+}
+
+.giorslaud-brand-copy a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.giorslaud-brand-copy a:hover {
+  text-decoration: underline;
+}
+
+.giorslaud-brand-copy a:focus-visible {
+  outline: 2px solid rgba(15, 142, 199, 0.35);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
 @media (min-width: 992px) {
   .intro .intro-img {
     width: 75%;
@@ -11328,13 +11429,33 @@ p {
   .intro .intro-text .intro-button {
     width: 100%;
     left: 0;
-    position: absolute;
-    bottom: -2rem;
+    position: relative;
+    bottom: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 1.75rem;
+    padding: 0 1rem;
   }
 }
 @media (min-width: 1200px) {
   .intro .intro-text {
     width: 45%;
+  }
+}
+@media (max-width: 480px) {
+  .giorslaud-booking-widget {
+    width: 100%;
+  }
+
+  .giorslaud-booking-button {
+    width: 100%;
+    padding: 14px 18px;
+    font-size: 15px;
+  }
+
+  .giorslaud-brand-badge {
+    width: 100%;
+    justify-content: center;
   }
 }
 
